@@ -7,6 +7,8 @@ Display list of images as an interactive stack gallery. Customisable. Responsive
 ### Example:
 [See basic example](https://cdn.rawgit.com/adamhayek/stackSlide/master/example/index.html#1-0-0)
 
+![How it works](https://github.com/adamhayek/stackSlide/blob/master/stackslide-show.gif)
+
 ### How to:
 ##### HTML:
 ```html
