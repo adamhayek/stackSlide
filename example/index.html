@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Stack Slide v. 1.0.0</title>
+
+		<!-- jQuery - required -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+		<!-- jQuery touchSwipe plugin - not required
+			 Hnadles swipes on mobile devices
+			 source: http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html -->
+		<script src="../plugins/jquery.touchSwipe.min.js"></script>
+
+		<!-- stackSlide src - required -->
+		<script src="../src/js/stackslide.js"></script>
+
+		<!-- stackSlide css - required -->
+		<link rel="stylesheet" href="../src/css/stackslide.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<ul id="stackslide-list-left">
+				<li data-title="Test image 1"><img src="../images/sample1.jpg" alt="image"></li>
+				<li data-title="Test image 2"><img src="../images/sample2.jpg" alt="image"></li>
+				<li data-title="Test image 3"><img src="../images/sample3.jpg" alt="image"></li>
+				<li data-title="Test image 4"><img src="../images/sample4.jpg" alt="image"></li>
+				<li data-title="Test image 5"><img src="../images/sample5.jpg" alt="image"></li>
+				<li data-title="Test image 6"><img src="../images/sample1.jpg" alt="image"></li>
+				<li data-title="Test image 7"><img src="../images/sample2.jpg" alt="image"></li>
+				<li data-title="Test image 8"><img src="../images/sample3.jpg" alt="image"></li>
+				<li data-title="Test image 9"><img src="../images/sample4.jpg" alt="image"></li>
+				<li data-title="Test image 10"><img src="../images/sample5.jpg" alt="image"></li>
+			</ul>
+		</div>
+		<!-- <div class="wrap">
+			<ul id="stackslide-list-right">
+				<li data-title="Test image 1"><img src="../images/sample1.jpg" alt="image"></li>
+				<li data-title="Test image 9"><img src="../images/sample4.jpg" alt="image"></li>
+				<li data-title="Test image 10"><img src="../images/sample5.jpg" alt="image"></li>
+			</ul>
+		</div> -->
+	</body>
+</html>
+
+<style>
+body{
+	padding: 0;
+}
+
+	.wrap{
+		width: 100%;
+
+		overflow: hidden;
+		position: relative;
+
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		padding: 40px;
+
+		box-sizing: border-box;
+	}
+
+		#stackslide-list-left{
+			padding-left: 20%;
+
+			width: 100%;
+
+			box-sizing: border-box;
+
+			position: relative;
+		}
+
+</style>
+
+<script>
+	//wait for DOM to load
+	$(window).load(function(){
+		//select list element and
+		//initialize left slider with options object
+		var stackSlideLeft = $('#stackslide-list-left').stackSlide({
+			width: '40%',
+			maxStack: 3,
+			onSlide: function(i){
+				if (i > 0) {
+					$('#stackslide-title').css('opacity', 0.0)
+				}else{
+					$('#stackslide-title').css('opacity', 1.0)
+				}
+			}
+		})
+
+		//initialize right slider with options object
+		var stackSlideRight = $('#stackslide-list-right').stackSlide({
+			width: '40%',
+			orientation: 'right',
+			maxStack: 7
+		})
+	})
+</script>
