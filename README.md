@@ -1,5 +1,5 @@
 # jQuery stackSlide
-Display list of images as an interactive stack gallery. Customisable. Responsive. Supports swipe gesture.
+Display list of images as an interactive stack gallery. Customisable. Responsive. Supports swipe gestures.
 
 ### Dependencies:
 - jQuery
