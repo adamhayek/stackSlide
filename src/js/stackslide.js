@@ -365,7 +365,7 @@ $.fn.stackSlide = function( options ) {
 $.fn.stackSlide.defaults = {
     marginTop: 20,
     marginSide: 20,
-    width: 500,
+    width: '500px',
     controlWidth: 34,
     controlHeight: 64,
     controlSpacing: 20,

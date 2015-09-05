@@ -34,13 +34,6 @@
 				<li data-title="Test image 10"><img src="../images/sample5.jpg" alt="image"></li>
 			</ul>
 		</div>
-		<!-- <div class="wrap">
-			<ul id="stackslide-list-right">
-				<li data-title="Test image 1"><img src="../images/sample1.jpg" alt="image"></li>
-				<li data-title="Test image 9"><img src="../images/sample4.jpg" alt="image"></li>
-				<li data-title="Test image 10"><img src="../images/sample5.jpg" alt="image"></li>
-			</ul>
-		</div> -->
 	</body>
 </html>
 
@@ -81,26 +74,16 @@ body{
 
 <script>
 	//wait for DOM to load
+	//crucial for image sizes to be measured correctly
 	$(window).load(function(){
 		//select list element and
 		//initialize left slider with options object
 		var stackSlideLeft = $('#stackslide-list-left').stackSlide({
 			width: '40%',
-			maxStack: 3,
+			maxStack: 5,
 			onSlide: function(i){
-				if (i > 0) {
-					$('#stackslide-title').css('opacity', 0.0)
-				}else{
-					$('#stackslide-title').css('opacity', 1.0)
-				}
+				console.log('Current index: '+i)
 			}
-		})
-
-		//initialize right slider with options object
-		var stackSlideRight = $('#stackslide-list-right').stackSlide({
-			width: '40%',
-			orientation: 'right',
-			maxStack: 7
 		})
 	})
 </script>
